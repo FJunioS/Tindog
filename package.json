@@ -18,5 +18,13 @@
     "gulp-terser": "^2.0.0"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juniokoi/Study.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Juniokoi/Study/issues"
+  },
+  "homepage": "https://github.com/Juniokoi/Study#readme",
   "description": ""
 }
