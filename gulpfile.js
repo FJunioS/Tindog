@@ -1,28 +1,62 @@
-const gulp = require('gulp');
+const {
+    src,
+    dest,
+    watch,
+    series
+} = require('gulp');
 const sass = require('gulp-sass');
-const browserSync = require('browser-sync').create();
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
+const terser = require('gulp-terser');
+const browsersync = require('browser-sync').create();
 
-//Compile scss into css
-function style() {
-    return gulp.src('src/scss/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('src/css'))
-        .pipe(browserSync.stream());
+
+//Sass task
+function scssTask() {
+    return src('src/scss/style.scss', {
+            sourcemaps: true
+        })
+        .pipe(sass())
+        .pipe(postcss([cssnano()]))
+        .pipe(dest('src/css/', {
+            sourcemaps: '.'
+        }))
 }
-
-
-//BrowserSync config
-function watch() {
-    browserSync.init({
+//JavaScript Task
+function jsTask() {
+    return src('src/js/*.js', {
+            sourcemaps: true
+        })
+        .pipe(terser())
+        .pipe(dest('dist', {
+            sourcemaps: '.'
+        }));
+}
+//Browsersync Tasks
+function browsersyncServe(cb) {
+    browsersync.init({
         server: {
-            baseDir: "./src",
-            index: "/index.html"
+            baseDir: 'src/.',
         }
     });
-    gulp.watch('src/scss/**/*.scss', style)
-    gulp.watch('./*.html').on('change', browserSync.reload);
-    gulp.watch('src/scss/**/*.js').on('change', browserSync.reload);
+    cb();
 }
 
-exports.style = style;
-exports.watch = watch;
+function browsersyncReload(cb) {
+    browsersync.reload();
+    cb();
+}
+
+// Watch Task
+function watchTask() {
+    watch('src/*.html', browsersyncReload);
+    watch(['src/scss/style .scss', 'src/js/**/*.js'], series(scssTask, jsTask, browsersyncReload));
+}
+
+//Default Gulp Task
+exports.default = series(
+    scssTask,
+    jsTask,
+    browsersyncServe,
+    watchTask
+);

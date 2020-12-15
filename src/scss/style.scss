@@ -1,7 +1,8 @@
 $theme-colors: ("primary": #FF69B4);
+@import "node_modules/bootstrap/scss/bootstrap";
 
 body {
     color: white;
-    background: rgb(70, 39, 39);
+    background: rgb(116, 0, 0);
     height: 400vh;
 }
