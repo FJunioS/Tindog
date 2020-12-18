@@ -67,28 +67,33 @@ body {
 }
 
 #features {
-    // display: block;
-    width: 50%;
-    text-align: center;
+    position: relative;
+    margin: 7% 15%;
 
-    // margin: 0 auto;
-    i {
-        &:hover {
-            color: #ff4c68;
+    .feat-item {
+        text-align: center;
+        padding: 0 10%;
+
+        i {
+            &:hover {
+                color: #ff4c68;
+            }
+
+            font-size: 5rem;
+            color: #ef8172
         }
 
-        font-size: 5rem;
-        color: #ef8172
+        p {
+            color: #8f8f8f;
+            font-size: 1em;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin: 5%;
+        }
     }
 
-    p {
-        color: #8f8f8f;
-        font-size: 1em;
-    }
-
-    h3 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        font-size: 1.5rem;
-    }
 }
