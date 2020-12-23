@@ -2,9 +2,9 @@
 Tindog: [Site principal](src/index.html)
 ---
 ---
-EN :uk: : [1](##ENGLISH:)
+EN :uk: : [1](#ENGLISH)
 
-PT-BR 🇧🇷 : [2](##PORTUGUÊS-BRASILEIRO:)
+PT-BR 🇧🇷 : [2](#PORTUGUÊS-BRASILEIRO)
 
 
 ## ENGLISH:
