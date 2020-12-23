@@ -1,10 +1,11 @@
-# TINDOG
-Tindog: [Site principal](src/index.html)
----
----
-EN :uk: : [1](#ENGLISH)
+## Tindog: [Site principal](src/index.html)
 
-PT-BR 🇧🇷 : [2](#PORTUGUÊS-BRASILEIRO)
+---
+---
+
+EN :uk: [1](#ENGLISH)
+
+PT-BR 🇧🇷  : [2](#PORTUGUÊS-BRASILEIRO)
 
 
 ## ENGLISH:
