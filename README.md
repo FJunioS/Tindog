@@ -4,7 +4,7 @@ Tindog: [Site principal](src/index.html)
 ---
 EN :uk: : [1](##ENGLISH:)
 
-PT-BR :br: : [2](##PORTUGUÊS-BRASILEIRO:)
+PT-BR 🇧🇷 : [2](##PORTUGUÊS-BRASILEIRO:)
 
 
 ## ENGLISH:
