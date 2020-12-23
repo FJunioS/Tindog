@@ -10,11 +10,12 @@ body {
     max-width: 100%;
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
+    position: relative;
 }
 
 #title {
 
-    padding: 0 15%;
+    padding: 3% 15% 9%;
     background-color: $pinkish;
 
     .navbar {
@@ -54,11 +55,9 @@ body {
         }
 
         .smartdog {
-
-            position: relative;
-            left: 10%;
-
             img {
+                position: absolute;
+                width: 60%;
                 transform: rotate(30deg);
             }
         }
@@ -68,7 +67,8 @@ body {
 
 #features {
     position: relative;
-    margin: 7% 15%;
+    padding: 7% 15%;
+    background-color: #fff;
 
     .feat-item {
         text-align: center;
@@ -144,10 +144,35 @@ body {
 
 #pricing {
 
+    .card {
+        margin: 2%;
+    }
+
+    padding: 5% 15%;
+
+    .btn {
+        width: 100%;
+    }
+
+    .title {
+        text-align: center;
+
+    }
+
     h2,
     h3 {
         font-weight: 800;
         font-size: 3rem;
         line-height: 1.5;
     }
+
+    h2 {
+        text-decoration: to;
+        font-weight: 600;
+
+        .per-month {
+            color: #8a8a8a;
+        }
+    }
+
 }
