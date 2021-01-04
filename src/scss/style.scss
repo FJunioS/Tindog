@@ -2,6 +2,12 @@ $pinkish: #ff4260;
 $footer-background: #ff4c68;
 $texto: #fff;
 $breakpoint-tablet: 1377px;
+$font-montserrat: "Montserrat",
+Arial,
+"Helvetica Neue",
+Helvetica,
+sans-serif;
+
 @import "node_modules/bootstrap/scss/bootstrap";
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Ubuntu&display=swap');
@@ -15,7 +21,7 @@ $breakpoint-tablet: 1377px;
 body {
     overflow-x: hidden;
     max-width: 100%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font-montserrat;
     font-weight: normal;
     position: relative;
 }
@@ -46,7 +52,7 @@ body {
         .chamada {
 
             h1 {
-                font-family: 'Montserrat', sans-serif;
+                font-family: $font-montserrat;
                 font-weight: bolder;
                 font-size: 4rem;
                 line-height: 1.5em;
@@ -98,7 +104,7 @@ body {
         }
 
         h3 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: $font-montserrat;
             font-weight: bold;
             font-size: 1.5rem;
             margin: 5%;
@@ -119,7 +125,7 @@ body {
 
     h2,
     em {
-        font-family: 'Montserrat', sans-serif;
+        font-family: $font-montserrat;
         color: #fff;
     }
 
@@ -198,7 +204,7 @@ body {
 
         h3 {
             font-size: 4rem;
-            font-family: "Montserrat", Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-family: $font-montserrat;
             font-weight: 900;
             color: #fff;
             padding: 3% 0 5%;
@@ -211,7 +217,21 @@ body {
 }
 
 #footer {
+    padding: 5% 0;
     text-align: center;
+    font-size: 1em;
+    font-family: $font-montserrat;
+
+    a,
+    p {
+        color: #000;
+        padding: .5%;
+    }
+
+    p {
+        color: #707070;
+        padding-top: 2%;
+    }
 }
 
 @media only screen and (max-width: $breakpoint-tablet) {
